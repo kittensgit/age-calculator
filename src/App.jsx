@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <h1>Age Calculator</h1>
+      <h1 className="text-2xl">Age Calculator</h1>
       <AgeCalculatorForm calculateAge={calculateAge} />
       {age && <AgeResult age={age} />}
     </div>
