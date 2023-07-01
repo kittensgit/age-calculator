@@ -19,7 +19,7 @@ function App() {
     setAge({
       years: ageYears,
       months: ageMonths,
-      ageDays: ageDays
+      days: ageDays
     })
   }
 
