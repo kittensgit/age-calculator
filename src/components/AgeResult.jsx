@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const AgeResult = ({ age }) => {
     return (
-        <h4>
+        <h4 className="mt-10 text-2xl font-bold dark:text-white underline">
             You are {age.years} years, {age.months} months and {age.days} days old
         </h4>
     )

@@ -1,4 +1,4 @@
-import {differenceInDays, differenceInMonths, differenceInYears} from "date-fns"
+import { differenceInDays, differenceInMonths, differenceInYears } from "date-fns"
 
 import { useState } from "react"
 import AgeCalculatorForm from "./components/AgeCalculatorForm"
@@ -14,8 +14,6 @@ function App() {
     const ageYears = differenceInYears(today, birthDateObj)
     const ageMonths = differenceInMonths(today, birthDateObj)
     const ageDays = differenceInDays(today, birthDateObj)
-    console.log(ageYears, ageMonths, ageDays)
-
     setAge({
       years: ageYears,
       months: ageMonths,
@@ -24,11 +22,20 @@ function App() {
   }
 
   return (
-    <div>
-      <h1 className="text-2xl">Age Calculator</h1>
-      <AgeCalculatorForm calculateAge={calculateAge} />
-      {age && <AgeResult age={age} />}
-    </div>
+
+    <>
+      <section className="bg-white dark:bg-gray-900 all">
+        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Age Calculator</h1>
+          <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
+            Track your Life&apos;s Progress: Age in Years, Months, Days
+          </p>
+          <AgeCalculatorForm calculateAge={calculateAge} />
+          {age && <AgeResult age={age} />}
+        </div>
+      </section>
+    </>
   )
 }
 
